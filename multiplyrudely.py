@@ -7,7 +7,6 @@ error = "Fuck you, asshole. "
 surrender = "I give up!"
 result = "The product is "
 
-print intro
 
 def is_integer( s ):
     try:
@@ -38,8 +37,12 @@ def query( ):
             print success
             return int( factor )
 
-factor1 = query( )
-factor2 = query( )
-product = factor1 * factor2
+if __name__ == '__main__':
+    # only execute this stuff at runtime, rather than import time.
 
-print result + str( product ) + "."
+    print intro
+    factor1 = query( )
+    factor2 = query( )
+    product = factor1 * factor2
+
+    print result + str( product ) + "."
